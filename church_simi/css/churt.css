@@ -1,0 +1,407 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333333;
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Para ter espaço para rolar */
+}
+
+.navbar {
+    
+    position: absolute; /* Posiciona o menu sobre o vídeo */
+    top: 10px; /* Distância do topo */
+    right: 30%;
+    transform: translateX(80%); /* Centraliza horizontalmente */
+    z-index: 2; /* Coloca o menu acima do vídeo */
+    
+
+}
+
+.navbar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.navbar li {
+display: inline-flex;
+padding: 25px;
+font-size: 20px;
+
+
+}
+.navbar li:last-child {
+    
+    margin-right: 0; /* Remove a margem do último item */
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+transition: color 0.3s;
+}
+
+.navbar a:hover {
+color: #ffcc00; /* Cor do hover */
+}
+
+
+
+.header {
+    width: 100%;
+    position: relative;
+    height: 100vh; /* Ocupa toda a altura da janela */
+    overflow: hidden; /* Oculta o que ultrapassa o header */
+    margin-bottom: 0;
+    
+}
+
+.header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir todo o espaço */
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+}
+
+.header-content {
+    position: relative;
+    color: rgb(172, 209, 36);
+    text-align: center;
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente o texto */
+    z-index: 1; /* Coloca o texto acima do vídeo */
+}
+
+.overlay {
+    position: absolute; /* Posiciona o overlay em cima do vídeo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    pointer-events: none; /* Permite que eventos de mouse passem através do overlay */
+}
+/*WELCOM TO US*/
+
+.welcome-box {
+    position: relative; /* Para posicionar o conteúdo sobre a imagem */
+    width: 100%; /* Largura total */
+    height: 500px; /* Altura da box */
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+     /* Espaçamento interno */
+}
+
+.welcome-content {
+    background: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade para suavizar o texto */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 20px; /* Espaçamento interno do conteúdo */
+    width: 100%;
+    height: 460px;
+}
+
+.welcome-content h2 {
+    margin-bottom: 10px; /* Margem inferior para o título */
+    font-size: 2.5rem; /* Tamanho da fonte do título */
+    font-family: Helvetica;
+    margin-bottom: 50px;
+}
+
+.welcome-content p {
+    margin-bottom: 100px; /* Margem inferior para o parágrafo */
+    font-size: 1.6rem; /* Tamanho da fonte do parágrafo */
+}
+
+.btn {
+    
+    background-color: #4CAF50; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    text-decoration: none; /* Remove sublinhado do link */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Efeito de transição para o hover */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+
+/* ABAIXO OS BOX*/
+
+
+
+.container {
+    margin-top: 0;        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.box {
+    width: 98,5%; /* Ajusta a largura para que 4 boxes caibam por linha */
+    max-width: 100vw;
+    height: 500px; /* Altura fixa de 500px */
+    background-color: #4CAF50; /* Cor de fundo do box */
+    color: white; /* Cor do texto */
+    margin: 0; /* Margem entre os boxes */
+    display: flex; /* Usamos flexbox para alinhar a imagem e o texto */
+    align-items: center; /* Alinha verticalmente a imagem e o texto no centro */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para os boxes */
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Posição inicial para baixo */
+    transition: opacity 2s, transform 2s; /* Animação suave */
+}
+/* Defina cores diferentes */
+.box.color1 {
+    background-color: #4CAF50; /* Verde */
+}
+
+.box.color2 {
+    background-color: #2196F3; /* Azul */
+}
+
+.box.color3 {
+    background-color: #FF9800; /* Laranja */
+}
+
+.box.color4 {
+    background-color: #F44336; /* Vermelho */
+}
+.box-image {
+    width: 300px; /* Largura da imagem */
+    height: 400px; /* Altura da imagem */
+    margin-right: 50px; /* Espaço entre a imagem e o texto */
+}
+.box-text {
+    font-size: 1.5rem; /* Tamanho do texto */
+}
+.box.visible {
+    opacity: 1; /* Torna visível */
+    transform: translateY(0); /* Move para a posição original */
+}
+
+/*SECÇAO LISTEN SERVIÇA*/
+
+
+
+
+/*section ACIMA DO FOOTER*/
+
+.giving {
+    background-image: url('/Inchurch_similar/img/catsfoto.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: contain;
+    background-position: center;
+    height: 400px; /* Ajuste conforme necessário */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.classecat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Camada semi-transparente para destacar o texto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* Cor do texto */
+}
+
+.content {
+    z-index: 1; /* Garante que o conteúdo fique acima da sobreposição */
+}
+
+h2 {
+    font-size: 2.5rem; /* Tamanho do título */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem; /* Tamanho do texto */
+    margin-bottom: 40px;
+}
+
+.donate-button {
+    background-color: #f1c40f; /* Cor do botão */
+    color: #333; /* Cor do texto do botão */
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #e1b40e; /* Cor ao passar o mouse */
+}
+
+
+
+
+/*FOOTER*/
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.containerfoot {
+    width: 80%;
+    margin: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h1, .footer-section h2 {
+    color: #f1c40f;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+@media (max-width: 1024px) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Evita a rolagem horizontal extra */
+    }
+
+    .box {
+        width: 100%; /* Garante que os boxes ocupem toda a largura */
+        max-width: 100vw;
+    }
+
+    .navbar {
+        right: 50%;
+        transform: translateX(50%); /* Ajusta a posição da navbar */
+    }
+
+    .header-video {
+        width: 100vw;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        right: 45%; /* Ajuste a posição da navbar */
+    }
+
+    .navbar li {
+        padding: 15px; /* Ajuste do padding */
+        font-size: 16px; /* Reduzir o tamanho da fonte */
+    }
+
+    .header-content {
+        font-size: 24px; /* Reduzir o tamanho da fonte no cabeçalho */
+    }
+    .box {
+        width: 94%; /* Cada box ocupa 100% em telas menores */
+        height: auto; /* Altura automática para manter proporções */
+    }
+    
+}
+
+@media (max-width: 425px) {
+    
+    
+    
+    .navbar {
+        right: 15%; /* Ajuste a posição da navbar */
+        transform: translateX(5%);
+    }
+
+    .navbar li {
+        padding: 10px; /* Ajuste do padding */
+        font-size: 15px; /* Reduzir o tamanho da fonte */
+
+    }
+
+    .header-content {
+        font-size: 24px; /* Reduzir o tamanho da fonte no cabeçalho */
+    }
+
+    .welcome-box {
+        position: relative; /* Para posicionar o conteúdo sobre a imagem */
+        width: 100%; /* Largura total */
+        height: 350px; /* Altura da box */
+        display: flex; /* Usar flexbox para centralizar o conteúdo */
+        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; /* Centraliza horizontalmente */
+        color: white; /* Cor do texto */
+        text-align: center; /* Centraliza o texto */
+         /* Espaçamento interno */
+    }
+    
+    .welcome-content {
+        background: rgba(0, 0, 0, 0.5); /* Fundo preto com 50% de opacidade para suavizar o texto */
+        border-radius: 10px; /* Bordas arredondadas */
+        padding: 20px; /* Espaçamento interno do conteúdo */
+        width: 100%;
+        height: 310px;
+    }
+    
+    .welcome-content h2 {
+        font-size: 25px; /* Tamanho da fonte do título */
+        font-family: Helvetica;
+        margin-bottom: 5px;
+    }
+    
+    .welcome-content p {
+        margin-bottom: 100px; /* Margem inferior para o parágrafo */
+        font-size: 1rem; /* Tamanho da fonte do parágrafo */
+    }
+    
+    .box {
+        width: 100%; /* Cada box ocupa 100% em telas menores */
+        height: 300px; /* Altura automática para manter proporções */
+    }
+    .box-image {
+        width: 150px; /* Largura da imagem */
+        height: 200px; /* Altura da imagem */
+        margin-right: 50px; /* Espaço entre a imagem e o texto */
+    }
+    .box-text {
+        font-size: 1.1rem; /* Tamanho do texto */
+    }
+    
+}
+
