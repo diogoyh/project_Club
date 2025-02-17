@@ -200,7 +200,7 @@ color: #ffcc00; /* Cor do hover */
 /*section ACIMA DO FOOTER*/
 
 .giving {
-    background-image: url('/Inchurch_similar/img/catsfoto.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-image: url('../img/catsfoto.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: contain;
     background-position: center;
     height: 400px; /* Ajuste conforme necessário */
